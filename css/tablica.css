@@ -1,0 +1,29 @@
+table {
+    width:100%;
+    overflow: hidden;
+    border-collapse: collapse;
+    font-family: Century Gothic;
+}
+
+td {
+    padding: 20px;
+    background-color: rgba(255,255,255,0.3);
+    
+}
+
+th {
+    text-align: left;
+    padding: 15px;
+    background-color: red;
+    color: #fff;
+}
+
+thead  {
+    padding:5px;
+    background-color: red;
+}
+
+tr:hover{
+    background-color: red;
+    cursor:pointer;
+}

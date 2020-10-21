@@ -1,0 +1,120 @@
+
+.split {
+  height: 100%;
+  position: fixed;
+  z-index: 0;
+  top:52.8px;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+
+.left {
+  left: 0;
+  background-image: url("../multimedija/dance_resized.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width:70%;
+}
+.left2 {
+  left: 0;
+  margin-bottom: 59.2px;
+  color:white;
+  background-color: black;
+  width:70%;
+}
+
+.right {
+  right: 0;
+  background-color: #D3D3D3;
+  width:30%;
+  z-index: 0;
+}
+
+
+form {
+  font-family: Cenntury Gothic;
+  width: 50%;
+  border: 3px solid #f1f1f1;
+  display: inline-block;
+  
+  text-align: left;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f1f1f1;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: red;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.buttonreg {
+  background-color: red;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.buttonreg:hover {
+  opacity: 0.8;
+}
+.cancelbtn {
+  
+  width: 50%;
+  padding: 10px 18px;
+  border: none;
+  background-color: red;
+}
+
+.regbtn {
+  width: 50%;
+  padding: 10px 18px;
+  border: none;
+  background-color: red;
+}
+
+
+
+.container {
+  padding: 16px;
+}
+
+.g-recaptcha {
+    position: relative;
+    width: 100%;
+    background: #f9f9f9;
+    overflow: hidden;
+}
+
+.combobox{
+    width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}

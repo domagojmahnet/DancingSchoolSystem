@@ -1,0 +1,5 @@
+php_flag display_errors 1
+AuthType Basic
+AuthUserFile /var/www/WebDiP/2019_projekti/WebDiP2019x078/privatno/user.txt
+AuthName "Apache Login - Ispis korisnika"
+Require valid-user

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Dokumentacija</title>
+        <link href="css/general.css" rel="stylesheet" type="text/css"/>
+        <link href="css/prijava.css" rel="stylesheet" type="text/css"/>
+        <link href="css/tablica.css" rel="stylesheet" type="text/css"/>
+        <link href="css/dokumentacija.css" rel="stylesheet" type="text/css"/>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type="text/javascript" src="../js/javascript.js"></script>
+
+    </head>
+    <body class="resetka" style="background-color: black; color:white">
+        <header>
+            <div>
+                <a href="index.php"><img src="multimedija/logo.png" class="logo"></a>
+        </div>
+            </header>
+        <div class="prvired1" style="padding:20px;">
+            <h1>
+                Opis projektnog zadatka
+            </h1>
+            Projektni zadatak bio je izraditi Sustav za upravljanje upisom plesa i polaganje ispita nakon uspješnog završetka plesne škole.
+            Sustavom se koriste četiri tipa korisnika, neregistrirani, registrirani, mentor i administrator.
+            <br><br>
+            Neregistrirani korisnik može pregledavati plesne škole, broj njihovih polaznika te mentore. Registracijom mogu postati registrirani korisnici te tada
+            imaju mogućnost slanja zahtjeva za mentorstvo, pregledavanje termina tečaja plesa, polaganje ispita te pregled računa.
+            <br><br>
+            Mentor uz sve već navedene mogućnosti ima mogućnost kreiranja termina, kreiranja računa te pregledavanje statistike.
+            <br><br>
+            Administrator ima sve mogućnosti kao i neregistrirani, registrirani ili mentor te ima uvid u kompletne podatke na sustavu kojega može još dodatno podešavati.
+            
+        </div>
+        <div class="prvired2" style="padding:20px">
+            <h1>
+                Opis projektnog rješenja
+            </h1>
+            Cijeli sustav temelji se na HTML-u, CSS-u, JavaScriptu te PHP-u. Sam frontend realiziran je korištenjem HTML-a, CSS-a te nešto malo Javascripta, dok se backend temelji na PHP-u i JavaScriptu.
+            Sustav koristi MySql bazu podataka pohranjenu na barka.foi.hr serveru.
+            <br><br>
+            Sam sustav je koncipiran na način da kreira sesiju prilikom prijave, kako bi se utvrdila razina pristupa koju taj korisnik ima, time sprječavajući da korisnik ode na dio sustava koji nije
+            namijenjen njemu. Neregistrirani korisnik je korisnik koji nema korisnički račun u sustavu. Članom sustava postaje registracijom u sustav pri čemu unosi ime, prezime, korisničko ime te lozinku. 
+            Neregistrirani korisnik ima mogućnost pregledavanja plesnih škola te broj njihovih polaznika. Također može pregledavati mentore te ih pretraživati prema ključnim riječima. 
+            <br><br>
+             Registrirani korisnik je korisnik koji ima kreiran i aktiviran korisnički račun unutar sustava. Registrirani korisnik ima sve mogućnosti kao i neregistrirani korisnik uz nekoliko dodatnih mogućnosti.
+             Kod prijave u sustavu unosi se korisničko ime i lozinka. Ukoliko se korisnik 3 puta neuspješno pokuša prijaviti korisnički račun se zaključava te se onemogućava prijava u sustav. Korisnički račun može 
+             otključati samo administrator sustava. 
+</div>
+        <div style="margin-top:100px">
+            Registrirani korisnik ima mogućnost kreiranja zahtjeva za mentorstvo pri čemu odabire mentora, cjenik te prilaže svoj životopis.
+             Nakon kreiranja zahtjeva, isti može biti prihvaćen ili odbijen od strane mentora. Registrirani korisnik ima uvid u termine koje kreira njegov mentor.
+             <br><br>
+            Moderator je registrirani korisnik koji ima sve mogućnosti ranije definiranih uloga uz dodatak nekoliko dodatnih. 
+            Prilikom zaprimanja zahtjeva za mentorstvo moderator taj zahtjev prihvaća ili odbija. Ukoliko ga prihvati, podnositelj zahtjeva postaje član mentorove plesne škole.
+            Moderator ima uvid u izdane račune te su vidi podatke o plaćenim i neplaćenim računima.  Moderator ima i uvid u termine koje može kreirati za svoje polaznike, pri čemu upisuje opis te prilaže video.
+            <br><br>
+            Administrator, uz sve već navedeno, ima mogućnost kreiranja, ažuriranja i brisanja plesnih škola, cjenika i zahtjeva za ispit. Administrator također može dodijeliti mentorstvo korisniku. Pregledava
+            dnevnik sustava u kojem su zapisane sve radnje koje je neki korisnik radio na stranici.
+        </div>
+        <div>
+            
+        </div>
+        <div>
+            <h1>
+                ERA model
+            </h1>
+            <img src="multimedija/era.png" style="width:400%">
+        </div>
+        <div>
+            
+        </div>
+        <div>
+            
+        </div>
+        <div>
+            
+        </div>
+        <div>
+            <h3>
+                index.php
+            </h3>
+            Početna stranica projektnog rješenja.
+        </div>
+        <div>
+            <h3>
+                blokirani_racuni.php
+            </h3>
+            Stranica kojoj može pristupiti samo administrator, sadrži popis blokiranih korisnika te forme za blokiranje ili otključavanje korisničkog računa.
+        </div>
+        <div>
+            <h3>
+                cjenik.php
+            </h3>
+            Stranica kojoj može pristupiti samo administrator, sadrži popis cjenika te njegovih stavaka. administrator ima CRUD mogućnosti.
+        </div>
+        <div>
+            <h3>
+                dnevnik.php
+            </h3>
+            Stranica kojoj može pristupiti samo administrator, sadrži popis radnji u sustavu. Administrator može pretraživati podatke prema ključnim riječima.
+        </div>
+        <div>
+            <h3>
+                kreiranje_kategorija.php
+            </h3>
+            Stranica kojoj može pristupiti samo administrator, sadrži popis plesnih škola. Administrator ima CRUD mogućnosti.
+        </div>
+        <div>
+            <h3>
+                kreiranje_moderatora.php
+            </h3>
+            Stranica kojoj može pristupiti samo administrator, sadrži popis moderatora. Administrator može dodijeliti status moderatora.
+        </div>
+        <div>
+            <h3>
+                kreiranje_zahtjeva.php
+            </h3>
+            Stranica kojoj može pristupiti samo administrator, sadrži popis zahtjeva za ispit. Administrator ima CRUD mogućnost te daje prolaz ili pad na ispitu.
+        </div>
+        <div>
+            <h3>
+                tablica_blokirani.php
+            </h3>
+            Skripta koja se koristi za popunjavanje podataka u tablici u stranici blokirani_računi.
+        </div>
+        <div>
+            <h3>
+                tablica_cjenik.php
+            </h3>
+            Skripta koja se koristi za popunjavanje podataka u tablici u stranici cjenik.
+        </div>
+        <div>
+            <h3>
+                tablica_dnevnik.php
+            </h3>
+            Skripta koja se koristi za popunjavanje podataka u tablici u stranici dnevnik.
+        </div>
+        <div>
+            <h3>
+                tablica_kategorije.php
+            </h3>
+            Skripta koja se koristi za popunjavanje podataka u tablici u stranici kreiranje_kategorije.
+        </div>
+        <div>
+            <h3>
+                tablica_mmoderator.php
+            </h3>
+            Skripta koja se koristi za popunjavanje podataka u tablici u stranici kreiranje_moderatora.
+        </div>
+        <div>
+            <h3>
+                tablica_zahtjevi.php
+            </h3>
+            Skripta koja se koristi za popunjavanje podataka u tablici u stranici kreiranje_zahtjeva.
+        </div>
+        <div>
+            <h3>
+                kreiranje_termina.php
+            </h3>
+            Stranica kojoj mogu pristupiti mentor i administrator. Služi za pregled i kreiranje termina za njihovog polaznika.
+        </div>
+        <div>
+            <h3>
+                popis_racuna.php
+            </h3>
+            Stranica kojoj mogu pristupiti mentor i administrator. Služi za pregled i kreiranje računa za njihovog polaznika te potvrđivanje plaćanja.
+        </div>
+        <div>
+            <h3>
+                popis_zahtjeva.php
+            </h3>
+            Stranica kojoj mogu pristupiti mentor i administrator. Služi za pregled i potvrdu ili odbitak primmljennih zahtjeva za mentorstvo.
+        </div>
+        <div>
+            <h3>
+                unos_podataka.php
+            </h3>
+            Stranica kojoj mogu pristupiti mentor i administrator. Služi za unos podataka o sebi.
+        </div>
+        <div>
+            <h3>
+                aktivacija.php
+            </h3>
+            Skripta za aktivaciju korisničkog računa.
+        </div>
+        <div>
+            <h3>
+                plesneskole.php
+            </h3>
+            Stranica kojoj mogu pristupiti neregistrirani, registrirani, mentor i administrator. Sadrži popis škola s brojem njihovih polaznika te popis mentora.
+        </div>
+         <div>
+            <h3>
+                prijava.php
+            </h3>
+            Stranica kojoj mogu pristupiti neregistrirani, registrirani, mentor i administrator. Služi za prijavu u sustav.
+        </div>
+        <div>
+            <h3>
+                registracija.php
+            </h3>
+            Stranica kojoj mogu pristupiti neregistrirani, registrirani, mentor i administrator. Služi za registraciju u sustav.
+        </div>
+        <div>
+            <h3>
+                username_provjera.php
+            </h3>
+            Skripta za provjeru zauzetosti korisničkog imena u stranici registracija_php.
+        </div>
+        <div>
+            <h3>
+                zaboravljenalozinka.php
+            </h3>
+            Skripta za slanje novogenerirane lozinke na mail.
+        </div>
+        <div>
+            <h3>
+                mentori.php
+            </h3>
+            Stranica kojoj mogu pristupiti  registrirani, mentor i administrator. Služi za pregled slobodnih mentora.
+        </div>
+        <div>
+            <h3>
+                racuni.php
+            </h3>
+            Stranica kojoj mogu pristupiti  registrirani, mentor i administrator. Služi za pregled korisnikovih računa.
+        </div>
+        <div>
+            <h3>
+                zahtjev_mentorstvo.php
+            </h3>
+            Stranica kojoj mogu pristupiti  registrirani, mentor i administrator. Služi za pregled zahtjeva za mentorstvo i njihovo slanje.
+        </div>
+        <div>
+            <h3>
+                zahtjev_za_ispit.php
+            </h3>
+            Stranica kojoj mogu pristupiti  registrirani, mentor i administrator. Služi za pregled zahtjeva za ispit i njihovo slanje.
+        </div>
+        <div>
+            <h3>
+                nav.php
+            </h3>
+            Skripta za prikaz veza na stranice, ovisno o korisnikovoj razini pristupa.
+        </div>
+        <div>
+            <h3>
+                navpocetna.php
+            </h3>
+            Skripta za prikaz veza na stranice, ovisno o korisnikovoj razini pristupa. Odnosi se na index.php.
+        </div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div>
+            <h1>
+                Navigacijski dijagram
+            </h1>
+            <img src="multimedija/navigacijski.png" style="width:400%">
+        </div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div>
+            <h3>
+                Korištene tehnologije
+            </h3>
+            - HTML - za realizaciju frontend dijela<br>
+            - CSS - za realizaciju frontend dijela<br>
+            - JavaScript - za realizaciju frontend i backend dijela<br>
+            - PHP - za realizaciju backend dijela<br>
+            - MySql - za realizaciju baze podataka<br>
+            - jQuery - za realizaciju backend dijela<br>
+            - Ajax - za realizaciju backend dijela<br>
+        </div>
+        <div>
+            <h3>
+                Korišteni alati
+            </h3>
+            - MySql Workbench - za razvoj baze podataka<br>
+            - Netbeans IDE - za razvoj web stranice<br>
+        </div>
+        <div style="width:200%">
+            <h3>
+                Vanjske datoteke
+            </h3>
+            - baza.php - komunikacija s bazom podataka<br>
+            - sesija.php - skripta za kreiranje korisnničke sesije<br>
+            - https://www.google.com/recaptcha/api.js - za realizaciju CAPTCHe<br>
+            - https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js - za realizaciju jQuery funkcionalnosti<br>
+            - dataTable - za realizaciju pretraživanja i sortiranja
+        </div>
+<footer>
+</footer>
+</body>
+</html>

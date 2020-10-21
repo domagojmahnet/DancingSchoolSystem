@@ -1,0 +1,103 @@
+.split {
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 52.8px;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+body{
+    background-color: black;
+}
+
+.left {
+  left: 0;
+  width:20%;
+  z-index: 0;
+  border-right: solid red 5px;
+}
+
+.right {
+  right: 0;
+  width:80%;
+  z-index: 0;
+  background-color: #d3d3d3;
+}
+
+
+
+.container {
+    position: absolute;
+    top:0%;
+    width:100%;
+    z-index: 2;
+    color: #fff;
+}
+.container2 {
+    position: absolute;
+    top:0%;
+    width:60%;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:black;
+}
+
+table {
+    width:100%;
+    overflow: hidden;
+    border-collapse: collapse;
+    font-family: Century Gothic;
+}
+
+td {
+    padding: 20px;
+    background-color: rgba(255,255,255,0.3);
+    
+}
+
+th {
+    text-align: left;
+    padding: 15px;
+    background-color: red;
+    color: #fff;
+}
+
+thead  {
+    padding:5px;
+    background-color: red;
+}
+
+tr:hover{
+    background-color: red;
+    cursor:pointer;
+}
+
+.containerblokirani {
+    grid-row:2;
+    grid-column:1/ span 4;
+    top:0%;
+    width:100%;
+    z-index: 2;
+    color: #fff;
+}
+
+.resetforma{
+    align-content: center;
+    z-index:20;
+    grid-row:3;
+    grid-column:1/ span 2;
+    margin-top: 5%;
+}
+
+.blockforma{
+    align-content: center;
+    z-index:20;
+    grid-row:3;
+    grid-column:3/ span 4;
+    margin-top: 5%;
+}
+
+
